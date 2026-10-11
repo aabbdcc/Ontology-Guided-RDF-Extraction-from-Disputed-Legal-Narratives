@@ -1,0 +1,64 @@
+# Python environments and generated caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Build and packaging outputs
+build/
+dist/
+*.egg-info/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials/
+.codex/
+.agents/
+
+# Editors and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+# Local logs, scratch files and downloaded model weights
+logs/
+*.log
+*.tmp
+*.bak
+scratch/
+tmp/
+models/
+*.gguf
+*.safetensors
+*.pt
+*.pth
+
+# Personal application notes and one-off endpoint checks
+PROJECT_REVIEW.md
+results/CV_BULLETS.md
+results/local_model_smoke.json
+results/api_calls.jsonl
+
+# Publish only the audited complete paired run. Future runs need review
+# before adding an explicit exception here.
+results/llm_runs/*
+!results/llm_runs/challenge_20261011T181352Z/
