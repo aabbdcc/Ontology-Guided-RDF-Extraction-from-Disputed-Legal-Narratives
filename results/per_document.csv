@@ -1,0 +1,25 @@
+doc_id,category,text,gold_type,naive_recognized,expanded_recognized
+D01,simple_payment,"On 12 March 2025, Alice transferred EUR 10,000 to Company C.",payment,True,True
+D02,simple_payment,"On 9 April 2025, Benoit paid Company D EUR 4,500.",payment,False,True
+D03,simple_payment,"Company E received EUR 7,200 from Claire on 20 May 2025.",payment,False,True
+D04,simple_payment,"A bank record shows that David transferred EUR 8,000 to Company F on 14 June 2025.",payment,False,True
+D05,simple_payment,"On 21 July 2025, Eve sent EUR 3,250 to Company G.",payment,False,True
+D06,simple_payment,"On 2 August 2025, Company H transferred EUR 12,000 to Frank.",payment,True,True
+D07,attributed_claim,Alma claims that transfer P7 was a loan.,claim,True,True
+D08,attributed_claim,Boreal Ltd maintains that transfer P8 was an investment.,claim,False,True
+D09,attributed_claim,Celine alleges that payment P9 represented salary.,claim,False,True
+D10,attributed_claim,Delta Ltd asserts that transfer P10 was a repayment.,claim,False,True
+D11,attributed_claim,Eva argues that transfer P11 was a capital contribution.,claim,False,True
+D12,attributed_claim,Falcon Ltd claims that transfer P12 was a gift.,claim,True,True
+D13,competing_qualification,Mira claims that Transfer Q was a loan.,claim,True,True
+D14,competing_qualification,Northstar Ltd claims that Transfer Q was an investment.,claim,True,True
+D15,competing_qualification,Noah alleges that Payment R was a salary payment.,claim,False,True
+D16,competing_qualification,Orion Ltd asserts that Payment R was a contractor fee.,claim,False,True
+D17,competing_qualification,Pia maintains that Transfer S was a loan.,claim,False,True
+D18,competing_qualification,Quasar Ltd argues that Transfer S was a gift.,claim,False,True
+D19,numeric_semantics,"Alice claims that Company C owes her EUR 37,000 as reimbursement for Project P.",claim,False,True
+D20,numeric_semantics,"Alice states that she spent EUR 42,000 on Project P.",claim,False,True
+D21,numeric_semantics,"Alice says that her planned contribution to Project P was EUR 30,000.",claim,False,True
+D22,numeric_semantics,"Bob states that his planned contribution to Project R was EUR 40,000.",claim,False,True
+D23,numeric_semantics,"Bob states that his planned contribution to Project R was EUR 45,000.",claim,False,True
+D24,numeric_semantics,"A bank record documents that Bob transferred EUR 8,000 to Company C on 14 April 2025, without specifying its legal nature.",payment,False,True

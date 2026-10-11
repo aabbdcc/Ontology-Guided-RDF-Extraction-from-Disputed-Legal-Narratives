@@ -1,0 +1,17 @@
+{
+  "protocol_version": "2.0.0",
+  "model": "legal-kg-qwen4b:latest",
+  "dataset": "challenge",
+  "repetitions": 1,
+  "base_url": "http://localhost:11434/v1",
+  "json_mode": "on",
+  "seed": 42,
+  "experiment": "paired_same_model_baseline_vs_ontology_guided",
+  "claim_limit": "one event or claim per snippet",
+  "normalization": "JSON intermediate -> deterministic rdflib construction",
+  "caveat": "Synthetic author-constructed benchmark; nonrepresentative",
+  "n_documents": 24,
+  "baseline_prompt_sha256": "4c0079cd71b42b7c2a6e779eed3da2b035cb090b4a3d9c79b91411595eac3ca1",
+  "guided_prompt_sha256": "0f2f986b6ff8c96d3ad26996acb608c56961157ca543598b26f9b67e88197701",
+  "created_at_utc": "20261011T181352Z"
+}

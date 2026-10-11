@@ -1,0 +1,118 @@
+{
+  "dataset": "challenge",
+  "n_documents": 24,
+  "model": "legal-kg-qwen4b:latest",
+  "repetitions": 1,
+  "protocol_version": "2.0.0",
+  "primary_outcome": "micro core-triple F1; guided minus baseline",
+  "per_repeat": [
+    {
+      "repetition": 1,
+      "baseline": {
+        "precision": 0.85185,
+        "recall": 0.94521,
+        "f1": 0.8961,
+        "tp": 69,
+        "predicted": 81,
+        "gold": 73
+      },
+      "guided": {
+        "precision": 0.77528,
+        "recall": 0.94521,
+        "f1": 0.85185,
+        "tp": 69,
+        "predicted": 89,
+        "gold": 73
+      },
+      "delta_f1": -0.04425
+    }
+  ],
+  "mean_delta_f1": -0.04425,
+  "paired_document_bootstrap_ci95": [
+    -0.1085,
+    0.00804
+  ],
+  "bootstrap_iterations": 3000,
+  "subgroups": {
+    "abstention_controls": {
+      "n": 8,
+      "per_repeat": [
+        {
+          "baseline": {
+            "precision": 0.0,
+            "recall": 0,
+            "f1": 0.0,
+            "tp": 0,
+            "predicted": 10,
+            "gold": 0
+          },
+          "guided": {
+            "precision": 0.0,
+            "recall": 0,
+            "f1": 0.0,
+            "tp": 0,
+            "predicted": 17,
+            "gold": 0
+          },
+          "delta_f1": 0.0
+        }
+      ]
+    },
+    "in_template_positive": {
+      "n": 8,
+      "per_repeat": [
+        {
+          "baseline": {
+            "precision": 1.0,
+            "recall": 0.97297,
+            "f1": 0.9863,
+            "tp": 36,
+            "predicted": 36,
+            "gold": 37
+          },
+          "guided": {
+            "precision": 0.97222,
+            "recall": 0.94595,
+            "f1": 0.9589,
+            "tp": 35,
+            "predicted": 36,
+            "gold": 37
+          },
+          "delta_f1": -0.0274
+        }
+      ]
+    },
+    "paraphrase_out_of_template": {
+      "n": 8,
+      "per_repeat": [
+        {
+          "baseline": {
+            "precision": 0.94286,
+            "recall": 0.91667,
+            "f1": 0.92958,
+            "tp": 33,
+            "predicted": 35,
+            "gold": 36
+          },
+          "guided": {
+            "precision": 0.94444,
+            "recall": 0.94444,
+            "f1": 0.94444,
+            "tp": 34,
+            "predicted": 36,
+            "gold": 36
+          },
+          "delta_f1": 0.01486
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Synthetic manually authored passages are not a representative legal corpus.",
+    "The 24-item challenge set contains paraphrases of development cases.",
+    "CI measures sampling variability over these 24 fixed document units, not real-world generalization.",
+    "Model randomness can remain even at temperature zero.",
+    "Guided arm adds explanatory semantic constraints AND ontology AND SHACL: cannot attribute any change to ontology alone.",
+    "Both arms produce JSON annotations converted deterministically into RDF."
+  ]
+}

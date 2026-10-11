@@ -1,0 +1,15 @@
+{
+  "engine": "pyshacl",
+  "gold": {
+    "conforms": true,
+    "violations": 0,
+    "engine": "pyshacl",
+    "details": "Validation Report\nConforms: True\n"
+  },
+  "missing_payer": {
+    "conforms": false,
+    "violations": 1,
+    "engine": "pyshacl",
+    "details": "Validation Report\nConforms: False\nResults (1):\nConstraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class ex:Party ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path ex:payer ]\n\tFocus Node: ex:payment_D01\n\tResult Path: ex:payer\n\tMessage: Less than 1 values on ex:payment_D01->ex:payer\n"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "conforms": false,
+  "violations": 6,
+  "engine": "offline_core_subset",
+  "details": [
+    {
+      "node": "https://example.org/legal-kg/payment_D01",
+      "property": "https://example.org/legal-kg/payer",
+      "constraint": "minCount"
+    },
+    {
+      "node": "https://example.org/legal-kg/payment_D01",
+      "property": "https://example.org/legal-kg/amount",
+      "constraint": "datatype"
+    },
+    {
+      "node": "https://example.org/legal-kg/payment_D01",
+      "property": "https://example.org/legal-kg/amount",
+      "constraint": "minInclusive"
+    },
+    {
+      "node": "https://example.org/legal-kg/payment_D01",
+      "property": "https://example.org/legal-kg/currency",
+      "constraint": "in"
+    },
+    {
+      "node": "https://example.org/legal-kg/payment_D02",
+      "property": "https://example.org/legal-kg/recipient",
+      "constraint": "class"
+    },
+    {
+      "node": "https://example.org/legal-kg/claim_D13",
+      "property": "https://example.org/legal-kg/assertedBy",
+      "constraint": "minCount"
+    }
+  ]
+}

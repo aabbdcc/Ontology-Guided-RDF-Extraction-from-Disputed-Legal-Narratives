@@ -1,0 +1,19 @@
+{
+  "n_paraphrases": 8,
+  "gold_core_triples": 36,
+  "selection": "manually adversarial, after rule design",
+  "methods": {
+    "rule_naive": {
+      "recognized_units": 0,
+      "triple_recall": 0.0,
+      "triple_correct": 0,
+      "triple_predicted": 0
+    },
+    "rule_attributed": {
+      "recognized_units": 0,
+      "triple_recall": 0.0,
+      "triple_correct": 0,
+      "triple_predicted": 0
+    }
+  }
+}

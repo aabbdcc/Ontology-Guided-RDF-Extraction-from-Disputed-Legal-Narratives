@@ -1,0 +1,468 @@
+{
+  "rule_naive": {
+    "n": 24,
+    "positive_gold": 16,
+    "negative_gold": 8,
+    "positive_detected": 2,
+    "correct_abstentions": 8,
+    "false_positive_abstentions": 0,
+    "type_accuracy": 0.4167,
+    "core_triples": {
+      "tp": 9,
+      "predicted": 9,
+      "gold": 73,
+      "precision": 1.0,
+      "recall": 0.1233,
+      "f1": 0.2195
+    },
+    "groups": {
+      "abstention_controls": {
+        "n": 8,
+        "type_correct": 8,
+        "detected": 0
+      },
+      "in_template_positive": {
+        "n": 8,
+        "type_correct": 2,
+        "detected": 2
+      },
+      "paraphrase_out_of_template": {
+        "n": 8,
+        "type_correct": 0,
+        "detected": 0
+      }
+    },
+    "shacl_subset": {
+      "engine": "offline_core_subset",
+      "conforms": true,
+      "violations": 0
+    },
+    "per_record": [
+      {
+        "id": "P01",
+        "group": "paraphrase_out_of_template",
+        "expected": "payment",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "P02",
+        "group": "paraphrase_out_of_template",
+        "expected": "payment",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "P03",
+        "group": "paraphrase_out_of_template",
+        "expected": "payment",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "P04",
+        "group": "paraphrase_out_of_template",
+        "expected": "claim",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "P05",
+        "group": "paraphrase_out_of_template",
+        "expected": "claim",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "P06",
+        "group": "paraphrase_out_of_template",
+        "expected": "claim",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "P07",
+        "group": "paraphrase_out_of_template",
+        "expected": "claim",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "P08",
+        "group": "paraphrase_out_of_template",
+        "expected": "claim",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "H09",
+        "group": "in_template_positive",
+        "expected": "payment",
+        "predicted": "payment",
+        "type_correct": true,
+        "abstain_correct": false
+      },
+      {
+        "id": "H10",
+        "group": "in_template_positive",
+        "expected": "payment",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "H11",
+        "group": "in_template_positive",
+        "expected": "payment",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "H12",
+        "group": "in_template_positive",
+        "expected": "payment",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "H13",
+        "group": "in_template_positive",
+        "expected": "claim",
+        "predicted": "claim",
+        "type_correct": true,
+        "abstain_correct": false
+      },
+      {
+        "id": "H14",
+        "group": "in_template_positive",
+        "expected": "claim",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "H15",
+        "group": "in_template_positive",
+        "expected": "claim",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "H16",
+        "group": "in_template_positive",
+        "expected": "claim",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "H17",
+        "group": "abstention_controls",
+        "expected": "none",
+        "predicted": "none",
+        "type_correct": true,
+        "abstain_correct": true
+      },
+      {
+        "id": "H18",
+        "group": "abstention_controls",
+        "expected": "none",
+        "predicted": "none",
+        "type_correct": true,
+        "abstain_correct": true
+      },
+      {
+        "id": "H19",
+        "group": "abstention_controls",
+        "expected": "none",
+        "predicted": "none",
+        "type_correct": true,
+        "abstain_correct": true
+      },
+      {
+        "id": "H20",
+        "group": "abstention_controls",
+        "expected": "none",
+        "predicted": "none",
+        "type_correct": true,
+        "abstain_correct": true
+      },
+      {
+        "id": "H21",
+        "group": "abstention_controls",
+        "expected": "none",
+        "predicted": "none",
+        "type_correct": true,
+        "abstain_correct": true
+      },
+      {
+        "id": "H22",
+        "group": "abstention_controls",
+        "expected": "none",
+        "predicted": "none",
+        "type_correct": true,
+        "abstain_correct": true
+      },
+      {
+        "id": "H23",
+        "group": "abstention_controls",
+        "expected": "none",
+        "predicted": "none",
+        "type_correct": true,
+        "abstain_correct": true
+      },
+      {
+        "id": "H24",
+        "group": "abstention_controls",
+        "expected": "none",
+        "predicted": "none",
+        "type_correct": true,
+        "abstain_correct": true
+      }
+    ]
+  },
+  "rule_attributed": {
+    "n": 24,
+    "positive_gold": 16,
+    "negative_gold": 8,
+    "positive_detected": 8,
+    "correct_abstentions": 8,
+    "false_positive_abstentions": 0,
+    "type_accuracy": 0.6667,
+    "core_triples": {
+      "tp": 37,
+      "predicted": 37,
+      "gold": 73,
+      "precision": 1.0,
+      "recall": 0.5068,
+      "f1": 0.6727
+    },
+    "groups": {
+      "abstention_controls": {
+        "n": 8,
+        "type_correct": 8,
+        "detected": 0
+      },
+      "in_template_positive": {
+        "n": 8,
+        "type_correct": 8,
+        "detected": 8
+      },
+      "paraphrase_out_of_template": {
+        "n": 8,
+        "type_correct": 0,
+        "detected": 0
+      }
+    },
+    "shacl_subset": {
+      "engine": "offline_core_subset",
+      "conforms": true,
+      "violations": 0
+    },
+    "per_record": [
+      {
+        "id": "P01",
+        "group": "paraphrase_out_of_template",
+        "expected": "payment",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "P02",
+        "group": "paraphrase_out_of_template",
+        "expected": "payment",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "P03",
+        "group": "paraphrase_out_of_template",
+        "expected": "payment",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "P04",
+        "group": "paraphrase_out_of_template",
+        "expected": "claim",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "P05",
+        "group": "paraphrase_out_of_template",
+        "expected": "claim",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "P06",
+        "group": "paraphrase_out_of_template",
+        "expected": "claim",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "P07",
+        "group": "paraphrase_out_of_template",
+        "expected": "claim",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "P08",
+        "group": "paraphrase_out_of_template",
+        "expected": "claim",
+        "predicted": "none",
+        "type_correct": false,
+        "abstain_correct": false
+      },
+      {
+        "id": "H09",
+        "group": "in_template_positive",
+        "expected": "payment",
+        "predicted": "payment",
+        "type_correct": true,
+        "abstain_correct": false
+      },
+      {
+        "id": "H10",
+        "group": "in_template_positive",
+        "expected": "payment",
+        "predicted": "payment",
+        "type_correct": true,
+        "abstain_correct": false
+      },
+      {
+        "id": "H11",
+        "group": "in_template_positive",
+        "expected": "payment",
+        "predicted": "payment",
+        "type_correct": true,
+        "abstain_correct": false
+      },
+      {
+        "id": "H12",
+        "group": "in_template_positive",
+        "expected": "payment",
+        "predicted": "payment",
+        "type_correct": true,
+        "abstain_correct": false
+      },
+      {
+        "id": "H13",
+        "group": "in_template_positive",
+        "expected": "claim",
+        "predicted": "claim",
+        "type_correct": true,
+        "abstain_correct": false
+      },
+      {
+        "id": "H14",
+        "group": "in_template_positive",
+        "expected": "claim",
+        "predicted": "claim",
+        "type_correct": true,
+        "abstain_correct": false
+      },
+      {
+        "id": "H15",
+        "group": "in_template_positive",
+        "expected": "claim",
+        "predicted": "claim",
+        "type_correct": true,
+        "abstain_correct": false
+      },
+      {
+        "id": "H16",
+        "group": "in_template_positive",
+        "expected": "claim",
+        "predicted": "claim",
+        "type_correct": true,
+        "abstain_correct": false
+      },
+      {
+        "id": "H17",
+        "group": "abstention_controls",
+        "expected": "none",
+        "predicted": "none",
+        "type_correct": true,
+        "abstain_correct": true
+      },
+      {
+        "id": "H18",
+        "group": "abstention_controls",
+        "expected": "none",
+        "predicted": "none",
+        "type_correct": true,
+        "abstain_correct": true
+      },
+      {
+        "id": "H19",
+        "group": "abstention_controls",
+        "expected": "none",
+        "predicted": "none",
+        "type_correct": true,
+        "abstain_correct": true
+      },
+      {
+        "id": "H20",
+        "group": "abstention_controls",
+        "expected": "none",
+        "predicted": "none",
+        "type_correct": true,
+        "abstain_correct": true
+      },
+      {
+        "id": "H21",
+        "group": "abstention_controls",
+        "expected": "none",
+        "predicted": "none",
+        "type_correct": true,
+        "abstain_correct": true
+      },
+      {
+        "id": "H22",
+        "group": "abstention_controls",
+        "expected": "none",
+        "predicted": "none",
+        "type_correct": true,
+        "abstain_correct": true
+      },
+      {
+        "id": "H23",
+        "group": "abstention_controls",
+        "expected": "none",
+        "predicted": "none",
+        "type_correct": true,
+        "abstain_correct": true
+      },
+      {
+        "id": "H24",
+        "group": "abstention_controls",
+        "expected": "none",
+        "predicted": "none",
+        "type_correct": true,
+        "abstain_correct": true
+      }
+    ]
+  }
+}

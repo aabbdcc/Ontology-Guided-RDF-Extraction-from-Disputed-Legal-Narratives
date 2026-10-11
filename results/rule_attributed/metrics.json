@@ -1,0 +1,85 @@
+{
+  "mode": "rule_attributed",
+  "model": null,
+  "data_origin": "fully_synthetic_author_created",
+  "method_family": "regex_rules_not_llm",
+  "n_documents": 24,
+  "evaluation": {
+    "core_triple_micro": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 98,
+      "predicted": 98,
+      "gold": 98
+    },
+    "recognized_units": 24,
+    "total_units": 24,
+    "recognized_by_category": {
+      "simple_payment": {
+        "correct": 6,
+        "total": 6
+      },
+      "attributed_claim": {
+        "correct": 6,
+        "total": 6
+      },
+      "competing_qualification": {
+        "correct": 6,
+        "total": 6
+      },
+      "numeric_semantics": {
+        "correct": 6,
+        "total": 6
+      }
+    },
+    "claim_attribution": {
+      "correct": 17,
+      "total": 17,
+      "gold_claim_recovery": 1.0
+    },
+    "provenance": {
+      "grounded_statements": 24,
+      "generated_statements": 24,
+      "generated_coverage": 1.0,
+      "gold_coverage": 1.0
+    },
+    "unsupported_qualifications": 0,
+    "potential_conflicts": [
+      {
+        "a": "D13",
+        "b": "D14",
+        "type": "competing_qualification"
+      },
+      {
+        "a": "D15",
+        "b": "D16",
+        "type": "competing_qualification"
+      },
+      {
+        "a": "D17",
+        "b": "D18",
+        "type": "competing_qualification"
+      },
+      {
+        "a": "D22",
+        "b": "D23",
+        "type": "numeric_disagreement"
+      }
+    ],
+    "conflict_pair": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 4,
+      "predicted": 4,
+      "gold": 4
+    }
+  },
+  "validation": {
+    "conforms": true,
+    "violations": 0,
+    "engine": "offline_core_subset",
+    "details": []
+  }
+}

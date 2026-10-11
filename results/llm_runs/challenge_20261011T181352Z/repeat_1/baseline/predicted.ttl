@@ -1,0 +1,291 @@
+@prefix ex: <https://example.org/legal-kg/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:claim_H13 a ex:Claim ;
+    ex:assertedBy ex:pia ;
+    ex:concerns ex:transfer_v ;
+    ex:derivedFrom ex:doc_H13 ;
+    ex:hasQualification ex:loan ;
+    ex:sourceText "Pia claims that transfer V was a loan." .
+
+ex:claim_H14 a ex:Claim ;
+    ex:assertedBy ex:company_n ;
+    ex:concerns ex:transfer_w ;
+    ex:derivedFrom ex:doc_H14 ;
+    ex:hasQualification ex:investment ;
+    ex:sourceText "Company N maintains that transfer W was an investment." .
+
+ex:claim_H15 a ex:Claim ;
+    ex:assertedBy ex:quinn ;
+    ex:concerns ex:payment_z ;
+    ex:derivedFrom ex:doc_H15 ;
+    ex:hasQualification ex:salary ;
+    ex:sourceText "payment Z represented salary" .
+
+ex:claim_H16 a ex:Claim ;
+    ex:assertedBy ex:rita ;
+    ex:claimAmount 17000.0 ;
+    ex:concerns ex:project_t ;
+    ex:derivedFrom ex:doc_H16 ;
+    ex:sourceText "Rita states that she spent EUR 17,000 on Project T." .
+
+ex:claim_H17 a ex:Claim ;
+    ex:assertedBy ex:alice ;
+    ex:concerns ex:transfer_v ;
+    ex:derivedFrom ex:doc_H17 ;
+    ex:hasQualification ex:loan ;
+    ex:sourceText "Alice denies that Transfer V was a loan." .
+
+ex:claim_H18 a ex:Claim ;
+    ex:claimAmount 3000.0 ;
+    ex:concerns ex:transfer_q ;
+    ex:derivedFrom ex:doc_H18 ;
+    ex:hasQualification ex:loan ;
+    ex:sourceText "The email asks whether EUR 3,000 might have been a loan." .
+
+ex:claim_H22 a ex:Claim ;
+    ex:assertedBy ex:participant ;
+    ex:concerns ex:transfer_q ;
+    ex:derivedFrom ex:doc_H22 ;
+    ex:sourceText "One participant said they were unsure whether the receipt was a salary or a gift." .
+
+ex:claim_H23 a ex:Claim ;
+    ex:assertedBy ex:court ;
+    ex:concerns ex:transfer_x ;
+    ex:derivedFrom ex:doc_H23 ;
+    ex:sourceText "The court has not decided whether Transfer X represented salary or repayment." .
+
+ex:claim_P04 a ex:Claim ;
+    ex:assertedBy ex:mira ;
+    ex:concerns ex:transfer_q ;
+    ex:derivedFrom ex:doc_P04 ;
+    ex:hasQualification ex:loan ;
+    ex:sourceText "Transfer Q should be treated as a loan" .
+
+ex:claim_P05 a ex:Claim ;
+    ex:assertedBy ex:northstar_ltd ;
+    ex:concerns ex:transfer_q ;
+    ex:derivedFrom ex:doc_P05 ;
+    ex:hasQualification ex:capital_investment ;
+    ex:sourceText "Transfer Q was a capital investment" .
+
+ex:claim_P06 a ex:Claim ;
+    ex:assertedBy ex:alice ;
+    ex:claimAmount 42000.0 ;
+    ex:concerns ex:project_p ;
+    ex:derivedFrom ex:doc_P06 ;
+    ex:sourceText "Alice put her overall spending on Project P at EUR 42,000." .
+
+ex:claim_P07 a ex:Claim ;
+    ex:assertedBy ex:alice ;
+    ex:claimAmount 37000.0 ;
+    ex:concerns ex:project_p ;
+    ex:derivedFrom ex:doc_P07 ;
+    ex:sourceText "Alice requested reimbursement of EUR 37,000 relating to Project P." .
+
+ex:claim_P08 a ex:Claim ;
+    ex:assertedBy ex:bob ;
+    ex:claimAmount 40000.0 ;
+    ex:claimKind ex:planned_contribution ;
+    ex:concerns ex:project_r ;
+    ex:derivedFrom ex:doc_P08 ;
+    ex:hasQualification ex:loan ;
+    ex:sourceText "Bob estimated EUR 40,000 as his planned contribution for Project R." .
+
+ex:fact_H09 a ex:ObservedFact ;
+    ex:concerns ex:payment_H09 ;
+    ex:derivedFrom ex:doc_H09 ;
+    ex:sourceText "On 15 February 2025, Lucy transferred EUR 2,700 to Company J." .
+
+ex:fact_H10 a ex:ObservedFact ;
+    ex:concerns ex:payment_H10 ;
+    ex:derivedFrom ex:doc_H10 ;
+    ex:sourceText "On 18 February 2025, Marcel paid Company K EUR 3,600." .
+
+ex:fact_H11 a ex:ObservedFact ;
+    ex:concerns ex:payment_H11 ;
+    ex:derivedFrom ex:doc_H11 ;
+    ex:sourceText "Company L received EUR 9,100 from Nia on 3 March 2025." .
+
+ex:fact_H12 a ex:ObservedFact ;
+    ex:concerns ex:payment_H12 ;
+    ex:derivedFrom ex:doc_H12 ;
+    ex:sourceText "A bank record shows that Oliver transferred EUR 7,700 to Company M on 4 April 2025." .
+
+ex:fact_P01 a ex:ObservedFact ;
+    ex:concerns ex:payment_P01 ;
+    ex:derivedFrom ex:doc_P01 ;
+    ex:sourceText "The bank statement records a €10,000 wire from Alice to Company C dated 12 March 2025." .
+
+ex:fact_P02 a ex:ObservedFact ;
+    ex:concerns ex:payment_P02 ;
+    ex:derivedFrom ex:doc_P02 ;
+    ex:sourceText "Benoit made a payment of 4,500 euros to Company D on 9 April 2025." .
+
+ex:fact_P03 a ex:ObservedFact ;
+    ex:concerns ex:payment_P03 ;
+    ex:derivedFrom ex:doc_P03 ;
+    ex:sourceText "Claire remitted EUR 7,200 to Company E (20 May 2025)." .
+
+ex:benoit a ex:Person .
+
+ex:bob a ex:Person .
+
+ex:capital_investment a skos:Concept .
+
+ex:claire a ex:Person .
+
+ex:company_c a ex:Company .
+
+ex:company_d a ex:Company .
+
+ex:company_e a ex:Company .
+
+ex:company_j a ex:Company .
+
+ex:company_k a ex:Company .
+
+ex:company_l a ex:Company .
+
+ex:company_m a ex:Company .
+
+ex:company_n a ex:Company .
+
+ex:court a ex:Person .
+
+ex:doc_H09 a ex:Document .
+
+ex:doc_H10 a ex:Document .
+
+ex:doc_H11 a ex:Document .
+
+ex:doc_H12 a ex:Document .
+
+ex:doc_H13 a ex:Document .
+
+ex:doc_H14 a ex:Document .
+
+ex:doc_H15 a ex:Document .
+
+ex:doc_H16 a ex:Document .
+
+ex:doc_H17 a ex:Document .
+
+ex:doc_H18 a ex:Document .
+
+ex:doc_H22 a ex:Document .
+
+ex:doc_H23 a ex:Document .
+
+ex:doc_P01 a ex:Document .
+
+ex:doc_P02 a ex:Document .
+
+ex:doc_P03 a ex:Document .
+
+ex:doc_P04 a ex:Document .
+
+ex:doc_P05 a ex:Document .
+
+ex:doc_P06 a ex:Document .
+
+ex:doc_P07 a ex:Document .
+
+ex:doc_P08 a ex:Document .
+
+ex:investment a skos:Concept .
+
+ex:lucy a ex:Person .
+
+ex:marcel a ex:Person .
+
+ex:mira a ex:Person .
+
+ex:nia a ex:Person .
+
+ex:northstar_ltd a ex:Company .
+
+ex:oliver a ex:Person .
+
+ex:participant a ex:Person .
+
+ex:payment_H09 a ex:Payment ;
+    ex:amount 2700.0 ;
+    ex:currency "EUR" ;
+    ex:date "2025-02-15"^^xsd:date ;
+    ex:payer ex:lucy ;
+    ex:recipient ex:company_j .
+
+ex:payment_H10 a ex:Payment ;
+    ex:amount 3600.0 ;
+    ex:currency "EUR" ;
+    ex:date "2025-02-18"^^xsd:date ;
+    ex:payer ex:marcel ;
+    ex:recipient ex:company_k .
+
+ex:payment_H11 a ex:Payment ;
+    ex:amount 9100.0 ;
+    ex:currency "EUR" ;
+    ex:date "2025-03-03"^^xsd:date ;
+    ex:payer ex:nia ;
+    ex:recipient ex:company_l .
+
+ex:payment_H12 a ex:Payment ;
+    ex:amount 7700.0 ;
+    ex:currency "EUR" ;
+    ex:date "2025-04-04"^^xsd:date ;
+    ex:payer ex:oliver ;
+    ex:recipient ex:company_m .
+
+ex:payment_P01 a ex:Payment ;
+    ex:amount 10000.0 ;
+    ex:currency "EUR" ;
+    ex:date "2025-03-12"^^xsd:date ;
+    ex:payer ex:alice ;
+    ex:recipient ex:company_c .
+
+ex:payment_P02 a ex:Payment ;
+    ex:amount 4500.0 ;
+    ex:currency "EUR" ;
+    ex:date "2025-04-09"^^xsd:date ;
+    ex:payer ex:benoit ;
+    ex:recipient ex:company_d .
+
+ex:payment_P03 a ex:Payment ;
+    ex:amount 7200.0 ;
+    ex:currency "EUR" ;
+    ex:date "2025-05-20"^^xsd:date ;
+    ex:payer ex:claire ;
+    ex:recipient ex:company_e .
+
+ex:payment_z a ex:DisputeMatter .
+
+ex:pia a ex:Person .
+
+ex:planned_contribution a skos:Concept .
+
+ex:project_r a ex:DisputeMatter .
+
+ex:project_t a ex:DisputeMatter .
+
+ex:quinn a ex:Person .
+
+ex:rita a ex:Person .
+
+ex:salary a skos:Concept .
+
+ex:transfer_w a ex:DisputeMatter .
+
+ex:transfer_x a ex:DisputeMatter .
+
+ex:project_p a ex:DisputeMatter .
+
+ex:transfer_v a ex:DisputeMatter .
+
+ex:alice a ex:Person .
+
+ex:transfer_q a ex:DisputeMatter .
+
+ex:loan a skos:Concept .
+

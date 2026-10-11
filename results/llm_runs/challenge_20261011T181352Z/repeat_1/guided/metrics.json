@@ -1,0 +1,48 @@
+{
+  "status": "complete",
+  "model": "legal-kg-qwen4b:latest",
+  "arm": "guided",
+  "iteration": 1,
+  "n_documents": 24,
+  "prompt_sha256": "0f2f986b6ff8c96d3ad26996acb608c56961157ca543598b26f9b67e88197701",
+  "quality": {
+    "documents": 24,
+    "triple": {
+      "tp": 69,
+      "predicted": 89,
+      "gold": 73,
+      "precision": 0.7753,
+      "recall": 0.9452,
+      "f1": 0.8519
+    },
+    "type_accuracy": 0.7917,
+    "claim_attribution": {
+      "correct": 3,
+      "total": 9,
+      "recall": 0.3333
+    },
+    "per_field": {
+      "correct": 62,
+      "total": 66,
+      "recall": 0.9394
+    },
+    "negative_false_positive_count": 5,
+    "claim_to_observed_payment_errors": 0,
+    "provenance": {
+      "exact_quote_count": 20,
+      "extracted_units": 21,
+      "exact_quote_coverage": 0.9524
+    },
+    "schema_validation": {
+      "engine": "pyshacl",
+      "conforms": false,
+      "violations": 2
+    }
+  },
+  "schema_validation_engine": "pyshacl",
+  "shacl_conforms": false,
+  "shacl_violations": 2,
+  "total_prompt_tokens": 39338,
+  "total_completion_tokens": 1129,
+  "total_latency_s": 53.3
+}

@@ -1,0 +1,145 @@
+{
+  "publication_safety": "Synthetic passages; no personal case records",
+  "gold_documents": 24,
+  "challenge_documents": 24,
+  "challenge_groups": {
+    "abstention_controls": 8,
+    "in_template_positive": 8,
+    "paraphrase_out_of_template": 8
+  },
+  "gold_claims": 17,
+  "gold_payments": 7,
+  "gold_rdf_triples_all": 247,
+  "gold_rdf_core_triples": 98,
+  "challenge_core_triples": 73,
+  "ontology_classes": 10,
+  "shacl_node_shapes": 3,
+  "shacl_property_shapes": 15,
+  "preannotated_competing_claim_pairs": 4,
+  "gold_validation": {
+    "engine": "offline_core_subset",
+    "conforms": true,
+    "violations": 0
+  },
+  "error_injection": {
+    "engine": "offline_core_subset",
+    "violations": 6
+  },
+  "rule_development": {
+    "rule_naive": {
+      "precision": 1.0,
+      "recall": 0.2449,
+      "f1": 0.3934,
+      "tp": 24,
+      "predicted": 24,
+      "gold": 98
+    },
+    "rule_attributed": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 98,
+      "predicted": 98,
+      "gold": 98
+    }
+  },
+  "rule_challenge": {
+    "rule_naive": {
+      "tp": 9,
+      "predicted": 9,
+      "gold": 73,
+      "precision": 1.0,
+      "recall": 0.1233,
+      "f1": 0.2195
+    },
+    "rule_attributed": {
+      "tp": 37,
+      "predicted": 37,
+      "gold": 73,
+      "precision": 1.0,
+      "recall": 0.5068,
+      "f1": 0.6727
+    }
+  },
+  "challenge_by_group": {
+    "rule_naive": {
+      "abstention_controls": {
+        "n": 8,
+        "type_correct": 8,
+        "detected": 0
+      },
+      "in_template_positive": {
+        "n": 8,
+        "type_correct": 2,
+        "detected": 2
+      },
+      "paraphrase_out_of_template": {
+        "n": 8,
+        "type_correct": 0,
+        "detected": 0
+      }
+    },
+    "rule_attributed": {
+      "abstention_controls": {
+        "n": 8,
+        "type_correct": 8,
+        "detected": 0
+      },
+      "in_template_positive": {
+        "n": 8,
+        "type_correct": 8,
+        "detected": 8
+      },
+      "paraphrase_out_of_template": {
+        "n": 8,
+        "type_correct": 0,
+        "detected": 0
+      }
+    }
+  },
+  "llm_inference_measured": true,
+  "standard_pyshacl_measured_in_this_environment": true,
+  "claims_not_supported": [
+    "generalized extraction accuracy",
+    "ontology guidance improves extraction"
+  ],
+  "standard_shacl_verification": {
+    "engine": "pyshacl",
+    "gold": {
+      "conforms": true,
+      "violations": 0,
+      "engine": "pyshacl",
+      "details": "Validation Report\nConforms: True\n"
+    },
+    "missing_payer": {
+      "conforms": false,
+      "violations": 1,
+      "engine": "pyshacl",
+      "details": "Validation Report\nConforms: False\nResults (1):\nConstraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class ex:Party ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path ex:payer ]\n\tFocus Node: ex:payment_D01\n\tResult Path: ex:payer\n\tMessage: Less than 1 values on ex:payment_D01->ex:payer\n"
+    }
+  },
+  "llm_run": "results/llm_runs/challenge_20261011T181352Z",
+  "llm_model": "legal-kg-qwen4b:latest",
+  "llm_dataset": "challenge",
+  "llm_repetitions": 1,
+  "llm_results": [
+    {
+      "baseline": {
+        "precision": 0.85185,
+        "recall": 0.94521,
+        "f1": 0.8961,
+        "tp": 69,
+        "predicted": 81,
+        "gold": 73
+      },
+      "guided": {
+        "precision": 0.77528,
+        "recall": 0.94521,
+        "f1": 0.85185,
+        "tp": 69,
+        "predicted": 89,
+        "gold": 73
+      }
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "status": "verified",
+  "run": "results/llm_runs/challenge_20261011T181352Z",
+  "arms": [
+    {
+      "repeat": 1,
+      "arm": "baseline",
+      "documents": 24,
+      "quality": {
+        "documents": 24,
+        "triple": {
+          "tp": 69,
+          "predicted": 81,
+          "gold": 73,
+          "precision": 0.8519,
+          "recall": 0.9452,
+          "f1": 0.8961
+        },
+        "type_accuracy": 0.8333,
+        "claim_attribution": {
+          "correct": 4,
+          "total": 9,
+          "recall": 0.4444
+        },
+        "per_field": {
+          "correct": 62,
+          "total": 66,
+          "recall": 0.9394
+        },
+        "negative_false_positive_count": 4,
+        "claim_to_observed_payment_errors": 0,
+        "provenance": {
+          "exact_quote_count": 20,
+          "extracted_units": 20,
+          "exact_quote_coverage": 1.0
+        },
+        "schema_validation": {
+          "engine": "pyshacl",
+          "conforms": false,
+          "violations": 1
+        }
+      },
+      "validation_report": {
+        "conforms": false,
+        "violations": 1,
+        "engine": "pyshacl",
+        "details": "Validation Report\nConforms: False\nResults (1):\nConstraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class ex:Party ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path ex:assertedBy ]\n\tFocus Node: ex:claim_H18\n\tResult Path: ex:assertedBy\n\tMessage: Less than 1 values on ex:claim_H18->ex:assertedBy\n"
+      }
+    },
+    {
+      "repeat": 1,
+      "arm": "guided",
+      "documents": 24,
+      "quality": {
+        "documents": 24,
+        "triple": {
+          "tp": 69,
+          "predicted": 89,
+          "gold": 73,
+          "precision": 0.7753,
+          "recall": 0.9452,
+          "f1": 0.8519
+        },
+        "type_accuracy": 0.7917,
+        "claim_attribution": {
+          "correct": 3,
+          "total": 9,
+          "recall": 0.3333
+        },
+        "per_field": {
+          "correct": 62,
+          "total": 66,
+          "recall": 0.9394
+        },
+        "negative_false_positive_count": 5,
+        "claim_to_observed_payment_errors": 0,
+        "provenance": {
+          "exact_quote_count": 20,
+          "extracted_units": 21,
+          "exact_quote_coverage": 0.9524
+        },
+        "schema_validation": {
+          "engine": "pyshacl",
+          "conforms": false,
+          "violations": 2
+        }
+      },
+      "validation_report": {
+        "conforms": false,
+        "violations": 2,
+        "engine": "pyshacl",
+        "details": "Validation Report\nConforms: False\nResults (2):\nConstraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class ex:Party ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path ex:assertedBy ]\n\tFocus Node: ex:claim_H18\n\tResult Path: ex:assertedBy\n\tMessage: Less than 1 values on ex:claim_H18->ex:assertedBy\nConstraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:datatype xsd:string ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path ex:sourceText ]\n\tFocus Node: ex:claim_H14\n\tResult Path: ex:sourceText\n\tMessage: Less than 1 values on ex:claim_H14->ex:sourceText\n"
+      }
+    }
+  ]
+}
