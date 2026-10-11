@@ -1,0 +1,22 @@
+name: CI — Tests and official SHACL validator
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m black --check src scripts tests
+      - run: python -m pytest -q
+      - run: python -m scripts.run_offline
+      - run: python -m scripts.run_challenge
+      - run: python -m scripts.verify_standard_shacl
+      - run: python -m scripts.audit_artifacts --run-dir results/llm_runs/challenge_20261011T181352Z
+      - run: python -m scripts.compare_llm_runs --run-dir results/llm_runs/challenge_20261011T181352Z
+      - run: python -m scripts.create_evidence_report --run-dir results/llm_runs/challenge_20261011T181352Z
