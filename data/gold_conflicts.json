@@ -1,0 +1,38 @@
+{
+  "pairs": [
+    {
+      "a": "D13",
+      "b": "D14",
+      "type": "competing_qualification"
+    },
+    {
+      "a": "D15",
+      "b": "D16",
+      "type": "competing_qualification"
+    },
+    {
+      "a": "D17",
+      "b": "D18",
+      "type": "competing_qualification"
+    },
+    {
+      "a": "D22",
+      "b": "D23",
+      "type": "numeric_disagreement"
+    }
+  ],
+  "non_conflicting_comparisons": [
+    [
+      "D19",
+      "D20"
+    ],
+    [
+      "D19",
+      "D21"
+    ],
+    [
+      "D20",
+      "D21"
+    ]
+  ]
+}

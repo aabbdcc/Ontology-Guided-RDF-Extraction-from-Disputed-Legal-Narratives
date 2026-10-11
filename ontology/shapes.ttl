@@ -1,0 +1,28 @@
+@prefix ex: <https://example.org/legal-kg/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ex:PaymentShape a sh:NodeShape ;
+ sh:targetClass ex:Payment ;
+ sh:property [ sh:path ex:payer ; sh:minCount 1 ; sh:maxCount 1 ; sh:class ex:Party ] ;
+ sh:property [ sh:path ex:recipient ; sh:minCount 1 ; sh:maxCount 1 ; sh:class ex:Party ] ;
+ sh:property [ sh:path ex:amount ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minInclusive 0 ] ;
+ sh:property [ sh:path ex:currency ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ("EUR") ] ;
+ sh:property [ sh:path ex:date ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:date ] .
+
+ex:ClaimShape a sh:NodeShape ;
+ sh:targetClass ex:Claim ;
+ sh:property [ sh:path ex:assertedBy ; sh:minCount 1 ; sh:maxCount 1 ; sh:class ex:Party ] ;
+ sh:property [ sh:path ex:concerns ; sh:minCount 1 ; sh:maxCount 1 ] ;
+ sh:property [ sh:path ex:derivedFrom ; sh:minCount 1 ; sh:class ex:Document ] ;
+ sh:property [ sh:path ex:sourceText ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+ sh:property [ sh:path ex:hasQualification ; sh:maxCount 1 ; sh:class skos:Concept ] ;
+ sh:property [ sh:path ex:claimKind ; sh:maxCount 1 ; sh:class skos:Concept ] ;
+ sh:property [ sh:path ex:claimAmount ; sh:maxCount 1 ; sh:datatype xsd:decimal ; sh:minInclusive 0 ] .
+
+ex:ObservedFactShape a sh:NodeShape ;
+ sh:targetClass ex:ObservedFact ;
+ sh:property [ sh:path ex:concerns ; sh:minCount 1 ] ;
+ sh:property [ sh:path ex:derivedFrom ; sh:minCount 1 ; sh:class ex:Document ] ;
+ sh:property [ sh:path ex:sourceText ; sh:minCount 1 ; sh:datatype xsd:string ] .

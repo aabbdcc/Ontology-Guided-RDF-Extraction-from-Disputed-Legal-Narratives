@@ -1,0 +1,24 @@
+{"id": "D01", "category": "simple_payment", "scenario": "isolated_01", "text": "On 12 March 2025, Alice transferred EUR 10,000 to Company C."}
+{"id": "D02", "category": "simple_payment", "scenario": "isolated_02", "text": "On 9 April 2025, Benoit paid Company D EUR 4,500."}
+{"id": "D03", "category": "simple_payment", "scenario": "isolated_03", "text": "Company E received EUR 7,200 from Claire on 20 May 2025."}
+{"id": "D04", "category": "simple_payment", "scenario": "isolated_04", "text": "A bank record shows that David transferred EUR 8,000 to Company F on 14 June 2025."}
+{"id": "D05", "category": "simple_payment", "scenario": "isolated_05", "text": "On 21 July 2025, Eve sent EUR 3,250 to Company G."}
+{"id": "D06", "category": "simple_payment", "scenario": "isolated_06", "text": "On 2 August 2025, Company H transferred EUR 12,000 to Frank."}
+{"id": "D07", "category": "attributed_claim", "scenario": "isolated_07", "text": "Alma claims that transfer P7 was a loan."}
+{"id": "D08", "category": "attributed_claim", "scenario": "isolated_08", "text": "Boreal Ltd maintains that transfer P8 was an investment."}
+{"id": "D09", "category": "attributed_claim", "scenario": "isolated_09", "text": "Celine alleges that payment P9 represented salary."}
+{"id": "D10", "category": "attributed_claim", "scenario": "isolated_10", "text": "Delta Ltd asserts that transfer P10 was a repayment."}
+{"id": "D11", "category": "attributed_claim", "scenario": "isolated_11", "text": "Eva argues that transfer P11 was a capital contribution."}
+{"id": "D12", "category": "attributed_claim", "scenario": "isolated_12", "text": "Falcon Ltd claims that transfer P12 was a gift."}
+{"id": "D13", "category": "competing_qualification", "scenario": "matter_q", "text": "Mira claims that Transfer Q was a loan."}
+{"id": "D14", "category": "competing_qualification", "scenario": "matter_q", "text": "Northstar Ltd claims that Transfer Q was an investment."}
+{"id": "D15", "category": "competing_qualification", "scenario": "matter_r", "text": "Noah alleges that Payment R was a salary payment."}
+{"id": "D16", "category": "competing_qualification", "scenario": "matter_r", "text": "Orion Ltd asserts that Payment R was a contractor fee."}
+{"id": "D17", "category": "competing_qualification", "scenario": "matter_s", "text": "Pia maintains that Transfer S was a loan."}
+{"id": "D18", "category": "competing_qualification", "scenario": "matter_s", "text": "Quasar Ltd argues that Transfer S was a gift."}
+{"id": "D19", "category": "numeric_semantics", "scenario": "project_p", "text": "Alice claims that Company C owes her EUR 37,000 as reimbursement for Project P."}
+{"id": "D20", "category": "numeric_semantics", "scenario": "project_p", "text": "Alice states that she spent EUR 42,000 on Project P."}
+{"id": "D21", "category": "numeric_semantics", "scenario": "project_p", "text": "Alice says that her planned contribution to Project P was EUR 30,000."}
+{"id": "D22", "category": "numeric_semantics", "scenario": "project_r", "text": "Bob states that his planned contribution to Project R was EUR 40,000."}
+{"id": "D23", "category": "numeric_semantics", "scenario": "project_r", "text": "Bob states that his planned contribution to Project R was EUR 45,000."}
+{"id": "D24", "category": "numeric_semantics", "scenario": "isolated_24", "text": "A bank record documents that Bob transferred EUR 8,000 to Company C on 14 April 2025, without specifying its legal nature."}

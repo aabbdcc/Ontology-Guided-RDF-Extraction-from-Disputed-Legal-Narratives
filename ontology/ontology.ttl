@@ -1,0 +1,31 @@
+@prefix ex: <https://example.org/legal-kg/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ex:Party a owl:Class .
+ex:Person a owl:Class ; rdfs:subClassOf ex:Party .
+ex:Company a owl:Class ; rdfs:subClassOf ex:Party .
+ex:Payment a owl:Class .
+ex:Statement a owl:Class .
+ex:Claim a owl:Class ; rdfs:subClassOf ex:Statement .
+ex:ObservedFact a owl:Class ; rdfs:subClassOf ex:Statement .
+ex:Document a owl:Class .
+ex:Evidence a owl:Class .
+ex:DisputeMatter a owl:Class .
+
+ex:payer a owl:ObjectProperty ; rdfs:domain ex:Payment ; rdfs:range ex:Party .
+ex:recipient a owl:ObjectProperty ; rdfs:domain ex:Payment ; rdfs:range ex:Party .
+ex:amount a owl:DatatypeProperty ; rdfs:domain ex:Payment ; rdfs:range xsd:decimal .
+ex:currency a owl:DatatypeProperty ; rdfs:domain ex:Payment ; rdfs:range xsd:string .
+ex:date a owl:DatatypeProperty ; rdfs:domain ex:Payment ; rdfs:range xsd:date .
+ex:assertedBy a owl:ObjectProperty ; rdfs:domain ex:Claim ; rdfs:range ex:Party .
+ex:concerns a owl:ObjectProperty ; rdfs:domain ex:Statement .
+ex:hasQualification a owl:ObjectProperty ; rdfs:domain ex:Claim ; rdfs:range skos:Concept .
+ex:claimKind a owl:ObjectProperty ; rdfs:domain ex:Claim ; rdfs:range skos:Concept .
+ex:claimAmount a owl:DatatypeProperty ; rdfs:domain ex:Claim ; rdfs:range xsd:decimal .
+ex:derivedFrom a owl:ObjectProperty ; rdfs:domain ex:Statement ; rdfs:range ex:Document .
+ex:sourceText a owl:DatatypeProperty ; rdfs:domain ex:Statement ; rdfs:range xsd:string .
+ex:label a owl:DatatypeProperty .

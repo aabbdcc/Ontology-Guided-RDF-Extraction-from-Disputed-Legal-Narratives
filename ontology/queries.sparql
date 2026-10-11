@@ -1,0 +1,10 @@
+PREFIX ex: <https://example.org/legal-kg/>
+SELECT ?claim ?party ?matter ?qualification ?source
+WHERE {
+  ?claim a ex:Claim ;
+         ex:assertedBy ?party ;
+         ex:concerns ?matter ;
+         ex:hasQualification ?qualification ;
+         ex:derivedFrom ?source .
+}
+ORDER BY ?claim
